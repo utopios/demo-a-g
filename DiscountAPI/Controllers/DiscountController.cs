@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiscountAPI.Controllers;
 
 [Route("api/v1/[controller]")]
 [ApiController]
+[EnableCors("all")]
 public class DiscountController : ControllerBase
 {
     private List<DiscountResponseDTO> fakeData = new List<DiscountResponseDTO>()

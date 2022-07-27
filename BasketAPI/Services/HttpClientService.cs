@@ -17,7 +17,7 @@ public class HttpClientService
     }
     public async Task<DiscountResponseDTO> GetDiscount(string code)
     {
-        var response= await _httpClient.GetAsync(_baseURL+ "api/v1/discount");
+        var response= await _httpClient.GetAsync(_baseURL+ "api/v1/discount/"+code);
         //j'utilise package nuget newton soft json pour convertir la réponse en objet json
         if (response.IsSuccessStatusCode)
         {
